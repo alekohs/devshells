@@ -12,6 +12,7 @@
                 {
                 devShell = with pkgs; mkShell {
                     buildInputs = [
+                        dotnetCorePackages.sdk_8_0
                         dotnetCorePackages.sdk_9_0
                     ];
                 };
