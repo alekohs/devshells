@@ -22,7 +22,7 @@
                     yarn = with pkgs; mkShell {
                         packages = [
                             nodejs_22
-                            nodePackages.yarn
+                            yarn
                         ];
                     };
 

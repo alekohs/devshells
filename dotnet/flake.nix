@@ -13,19 +13,19 @@
                 devShells = {
                     dotnet8 = with pkgs; mkShell {
                         packages = [
-                            dotnetCorePackages.sdk_8_0
                         ];
 
                         buildInputs = [
+                            dotnetCorePackages.sdk_8_0
                         ];
                     };
 
                     default = with pkgs; mkShell {
                         packages = [
-                            dotnetCorePackages.sdk_9_0
                         ];
 
                         buildInputs = [
+                            dotnetCorePackages.sdk_9_0
                         ];
                     };
 
