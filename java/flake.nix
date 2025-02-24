@@ -8,7 +8,7 @@
         utils.lib.eachDefaultSystem (system:
             let
                 pkgs = import nixpkgs { inherit system; };
-                java = pkgs.zulu17;
+                java = pkgs.jdk21;
                 gradle = pkgs.gradle.override { inherit java; };
                 kotlin = pkgs.kotlin.override { jre = java; };
                 shared = [
