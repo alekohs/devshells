@@ -10,12 +10,25 @@
                 pkgs = import nixpkgs { inherit system; };
             in
                 {
-                devShell = with pkgs; mkShell {
-                    buildInputs = [
-                        dotnetCorePackages.sdk_8_0
-                        dotnetCorePackages.sdk_9_0
-                    ];
+                devShells = {
+                    dotnet8 = with pkgs; mkShell {
+                        packages = [
+                            dotnetCorePackages.sdk_8_0
+                        ];
+
+                        buildInputs = [
+                        ];
+                    };
+
+                    default = with pkgs; mkShell {
+                        packages = [
+                            dotnetCorePackages.sdk_9_0
+                        ];
+
+                        buildInputs = [
+                        ];
+                    };
+
                 };
-            }
-        );
+            });
 }

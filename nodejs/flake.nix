@@ -10,11 +10,29 @@
                 pkgs = import nixpkgs { inherit system; };
             in
                 {
-                devShell = with pkgs; mkShell {
-                    buildInputs = [
-                        nodejs_22
-                        nodePackages.prettier
-                    ];
+                devShells = {
+                    pnpm = with pkgs; mkShell {
+                        packages = [
+                            nodejs_22
+                            nodePackages.prettier
+                            nodePackages.pnpm
+                        ];
+                    };
+
+                    yarn = with pkgs; mkShell {
+                        packages = [
+                            nodejs_22
+                            nodePackages.yarn
+                        ];
+                    };
+
+
+                    defaukt = with pkgs; mkShell {
+                        packages = [
+                            nodejs_22
+                            nodePackages.prettier
+                        ];
+                    };
                 };
             }
         );
