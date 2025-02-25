@@ -29,7 +29,7 @@
                     };
 
 
-                    defaukt = with pkgs; mkShell {
+                    default = with pkgs; mkShell {
                         name = "Node dev shell";
                         packages = [
                             nodejs_22
