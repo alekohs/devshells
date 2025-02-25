@@ -9,8 +9,13 @@
             let
                 pkgs = import nixpkgs { inherit system; };
                 hook = ''
-                    echo 'Installing EF core tools'
-                    dotnet tool install --global dotnet-ef
+                    if command -v dotnet ef > /dev/null; then
+                        dm=true
+                    else
+                        echo 'Installing EF core tools'
+                        dotnet tool install --global dotnet-ef
+                    fi
+
                 '';
             in
                 {
