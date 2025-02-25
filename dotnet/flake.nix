@@ -21,6 +21,7 @@
                 {
                 devShells = {
                     dotnet8 = with pkgs; mkShell {
+                        name = "Dotnet 8 SDK";
                         packages = [];
 
                         buildInputs = [
@@ -30,6 +31,7 @@
                     };
 
                     default = with pkgs; mkShell {
+                        name = "Dotnet 9 SDK";
                         packages = [];
                         buildInputs = [
                             dotnetCorePackages.sdk_9_0

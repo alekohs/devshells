@@ -12,6 +12,7 @@
                 {
                 devShells = {
                     pnpm = with pkgs; mkShell {
+                        name = "Pnpm dev shell";
                         packages = [
                             nodejs_22
                             nodePackages.prettier
@@ -20,6 +21,7 @@
                     };
 
                     yarn = with pkgs; mkShell {
+                        name = "Yarn dev shell";
                         packages = [
                             nodejs_22
                             yarn
@@ -28,6 +30,7 @@
 
 
                     defaukt = with pkgs; mkShell {
+                        name = "Node dev shell";
                         packages = [
                             nodejs_22
                             nodePackages.prettier

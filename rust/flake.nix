@@ -12,6 +12,7 @@
                 {
                 devShells = {
                     rust = with pkgs; mkShell {
+                        name = "Rust dev shell";
                         buildInputs = [
                             libiconv
                             gcc
@@ -26,6 +27,7 @@
                     };
 
                     default = with pkgs; mkShell {
+                        name = "Rustup dev shell";
                         buildInputs = [
                             libiconv
                             gcc

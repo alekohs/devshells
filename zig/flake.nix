@@ -11,6 +11,7 @@
             in
                 {
                 devShell = with pkgs; mkShell {
+                    name = "Zig dev shell";
                     buildInputs = [
                         zig
                     ];

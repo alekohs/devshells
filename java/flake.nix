@@ -19,6 +19,7 @@
                 {
                 devShells = {
                     kotlin = with pkgs; mkShell {
+                        name = "Kotling dev shell";
                         packages = [];
 
                         buildInputs = [
@@ -27,6 +28,7 @@
                     };
 
                     default = with pkgs; mkShell {
+                        name = "Java 21 dev shell";
                         packages = [ ];
                         buildInputs = [ ] ++ shared;
                     };

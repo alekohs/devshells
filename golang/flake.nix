@@ -11,6 +11,7 @@
             in
                 {
                 devShell = with pkgs; mkShell {
+                    name = "Go dev shell";
                     buildInputs = [
                         go_1_24
                         gcc

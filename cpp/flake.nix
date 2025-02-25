@@ -11,6 +11,7 @@
             in
                 {
                 devShell = with pkgs; mkShell {
+                    name = "C++ shell";
                     buildInputs = [
                         clang-tools
                         cmake
