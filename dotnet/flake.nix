@@ -2,9 +2,11 @@
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs";
         utils.url = "github:numtide/flake-utils";
+
+        ale-nvim.url = "github:alexanderkohkoinen/ale-nvim";
     };
 
-    outputs = { self, nixpkgs, utils }:
+    outputs = { self, nixpkgs, ale-nvim, utils }:
         utils.lib.eachDefaultSystem (system:
             let
                 pkgs = import nixpkgs { 
@@ -33,6 +35,8 @@
                     fi
 
                 '';
+
+                config.language.dotnet = true;
             in 
                 {
                 devShells = builtins.listToAttrs (map (version: {
@@ -47,7 +51,10 @@
 
                 defaultPackage = with pkgs; mkShell {
                     name = "Dotnet${defaultVersion}";
-                    packages = [];
+                    packages = with nixpkgs; [
+                        ale-nvim.packages.${system}.default 
+                    ];
+
                     buildInputs = [
                         dotnetCorePackages."sdk_${defaultVersion}_0"
                     ];
