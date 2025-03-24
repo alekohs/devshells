@@ -6,6 +6,7 @@
 
   outputs =
     {
+      self,
       nixpkgs,
       utils,
     }:
@@ -32,7 +33,7 @@
               shellHook = ''
                 gem install xcodeproj
                 pipx install pymobiledevice3
-                '';
+              '';
             };
         };
       }
