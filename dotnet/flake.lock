@@ -1,6 +1,116 @@
 {
   "nodes": {
+    "blink-cmp": {
+      "inputs": {
+        "fenix": "fenix",
+        "flake-parts": [
+          "kokovim",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "kokovim",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741989409,
+        "narHash": "sha256-q0IzIb+GNvOniatW3lnnaQxYPgS1JkaAC9VpF2aA2Jo=",
+        "owner": "saghen",
+        "repo": "blink.cmp",
+        "rev": "cb8cc634dee35b14e359daf2e9b0c418a60f75f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "saghen",
+        "repo": "blink.cmp",
+        "type": "github"
+      }
+    },
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "kokovim",
+          "blink-cmp",
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1734676450,
+        "narHash": "sha256-iwcxhTVe4h5TqW0HsNiOQP27eMBmbBshF+q2UjEy5aU=",
+        "owner": "nix-community",
+        "repo": "fenix",
+        "rev": "46e19fa0eb3260b2c3ee5b2cf89e73343c1296ab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "fenix",
+        "type": "github"
+      }
+    },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "kokovim",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741352980,
+        "narHash": "sha256-+u2UunDA4Cl5Fci3m7S643HzKmIDAe+fiXrLqYsR2fs=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "f4330d22f1c5d2ba72d3d22df5597d123fdb60a9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "kokovim": {
+      "inputs": {
+        "blink-cmp": "blink-cmp",
+        "flake-parts": "flake-parts",
+        "nixpkgs": "nixpkgs",
+        "nixvim": "nixvim",
+        "pkgs-by-name-for-flake-parts": "pkgs-by-name-for-flake-parts",
+        "snacks-nvim": "snacks-nvim"
+      },
+      "locked": {
+        "lastModified": 1742842411,
+        "narHash": "sha256-bJELulxh/syd7DSZOFeBJe3oDJjw6nFb0nEArojp21U=",
+        "owner": "alekohs",
+        "repo": "kokovim",
+        "rev": "b67ad29b5517f5c346d0b2a9faaef6d739522938",
+        "type": "github"
+      },
+      "original": {
+        "owner": "alekohs",
+        "ref": "dotnet8",
+        "repo": "kokovim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1741865919,
+        "narHash": "sha256-4thdbnP6dlbdq+qZWTsm4ffAwoS8Tiq1YResB+RP6WE=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "573c650e8a14b2faa0041645ab18aed7e60f0c9a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1739773471,
         "narHash": "sha256-Mh1X+j0rcK3TDRfx2uCttjh9+/u6p7k1h3Tz+MoaZ5Y=",
@@ -15,10 +125,87 @@
         "type": "github"
       }
     },
+    "nixvim": {
+      "inputs": {
+        "flake-parts": [
+          "kokovim",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "kokovim",
+          "nixpkgs"
+        ],
+        "nuschtosSearch": [
+          "kokovim"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741709061,
+        "narHash": "sha256-G1YTksB0CnVhpU1gEmvO3ugPS5CAmUpm5UtTIUIPnEI=",
+        "owner": "nix-community",
+        "repo": "nixvim",
+        "rev": "3a3abf11700f76738d8ad9d15054ceaf182d2974",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixvim",
+        "type": "github"
+      }
+    },
+    "pkgs-by-name-for-flake-parts": {
+      "locked": {
+        "lastModified": 1741279982,
+        "narHash": "sha256-PAuAgdzlKN/IePZ0/tK5GVrslpAC6aRKB/eGXBztG9o=",
+        "owner": "drupol",
+        "repo": "pkgs-by-name-for-flake-parts",
+        "rev": "7013e769c509a97cfe53c5924b45b273021225c3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "drupol",
+        "repo": "pkgs-by-name-for-flake-parts",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs",
+        "kokovim": "kokovim",
+        "nixpkgs": "nixpkgs_2",
         "utils": "utils"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734622712,
+        "narHash": "sha256-2Oc2LbFypF1EG3zTVIVcuT5XFJ7R3oAwu2tS8B0qQ0I=",
+        "owner": "rust-lang",
+        "repo": "rust-analyzer",
+        "rev": "fe027d79d22f2a7645da4143f5cc0f5f56239b97",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
+      }
+    },
+    "snacks-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1740868622,
+        "narHash": "sha256-Gw0Bp2YeoESiBLs3NPnqke3xwEjuiQDDU1CPofrhtig=",
+        "owner": "folke",
+        "repo": "snacks.nvim",
+        "rev": "bc0630e43be5699bb94dadc302c0d21615421d93",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "snacks.nvim",
+        "type": "github"
       }
     },
     "systems": {
