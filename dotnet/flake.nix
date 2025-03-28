@@ -34,7 +34,9 @@
         legacyPkgs = import nixpkgs {
           inherit system;
           overlays = [
-            (final: prev: { neovim = kokovim.packages.${prev.system}.default; })
+            (final: prev: {
+              neovim = kokovim.packages.${prev.system}.default;
+            })
           ];
           config = {
             config = {
@@ -79,6 +81,7 @@
               mkShell {
                 buildInputs = [
                   dotnetCorePackages."sdk_${version}_0"
+                  csharpier
                   neovim
                 ];
               };
@@ -92,6 +95,7 @@
             packages = [ ];
             buildInputs = [
               dotnetCorePackages."sdk_${defaultVersion}_0"
+              csharpier
             ];
             shellHook = hook;
           };
