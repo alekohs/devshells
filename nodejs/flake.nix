@@ -13,16 +13,17 @@
                 devShells = {
                     pnpm = with pkgs; mkShell {
                         name = "Pnpm dev shell";
-                        packages = [
+                        buildInputs = [
                             nodejs_22
                             nodePackages.prettier
+                            nodePackages.tailwindcss
                             nodePackages.pnpm
                         ];
                     };
 
                     yarn = with pkgs; mkShell {
                         name = "Yarn dev shell";
-                        packages = [
+                        buildInputs = [
                             nodejs_22
                             yarn
                         ];
@@ -31,9 +32,10 @@
 
                     default = with pkgs; mkShell {
                         name = "Node dev shell";
-                        packages = [
+                        buildInputs = [
                             nodejs_22
                             nodePackages.prettier
+                            nodePackages.tailwindcss
                         ];
                     };
                 };
