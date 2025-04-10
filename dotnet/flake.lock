@@ -80,11 +80,11 @@
         "snacks-nvim": "snacks-nvim"
       },
       "locked": {
-        "lastModified": 1744276374,
-        "narHash": "sha256-nSU7NV39i3OTelRvD/L79RCfxIOExWFdNMRa9r1cnkI=",
+        "lastModified": 1744292537,
+        "narHash": "sha256-3f7BBkwdO8Q7NBgbh58mP8T7m13BxyMK5sSN2bFWmzU=",
         "owner": "alekohs",
         "repo": "kokovim",
-        "rev": "665ca29fab2018d5e88ea3d7bbaf503507da27c1",
+        "rev": "f33e78abc553f3b8e4185aa9f26a7cbdbdbdab7a",
         "type": "github"
       },
       "original": {
