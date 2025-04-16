@@ -7,7 +7,7 @@ Setup alias and use
 ``alias nd="nix develop ~/develop-shells/dotnet -c zsh"``
 <br />
 
-Use it with 
+Use it with
 <br />
 ``nd dotnet``
 
@@ -15,3 +15,6 @@ To use with specific version
 <br />
 ``nd dotnet#dotnet7``
 
+
+## Update all flaake
+for dir in */; test -d $dir; and echo $dir; and nix flake update --flake $dir; end
