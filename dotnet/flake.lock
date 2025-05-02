@@ -80,11 +80,11 @@
         "snacks-nvim": "snacks-nvim"
       },
       "locked": {
-        "lastModified": 1745818720,
-        "narHash": "sha256-4ZqCoYdrv+pzPuLxiC7WvQZiNRC3G+w7wtOcyuLnJhg=",
+        "lastModified": 1746174852,
+        "narHash": "sha256-9V83M3YHwwnHEmfazTAKm6PgMtkEOhEf5VRAMdRKaCA=",
         "owner": "alekohs",
         "repo": "kokovim",
-        "rev": "3d199d1047486dfdf8e9dd5ede1775eb4efd5a18",
+        "rev": "18295d3ec319f2b3587f344f5c199c46cb1e7694",
         "type": "github"
       },
       "original": {
@@ -112,11 +112,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1745930157,
-        "narHash": "sha256-y3h3NLnzRSiUkYpnfvnS669zWZLoqqI6NprtLQ+5dck=",
+        "lastModified": 1746174425,
+        "narHash": "sha256-CrL/77iLx7AIqM+U5RBs2gQcyP/vydbs8IltM965/bw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "46e634be05ce9dc6d4db8e664515ba10b78151ae",
+        "rev": "369688f0db33af16781562422ad1a6bbb248a141",
         "type": "github"
       },
       "original": {
