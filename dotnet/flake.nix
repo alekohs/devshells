@@ -3,6 +3,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs";
     utils.url = "github:numtide/flake-utils";
     kokovim.url = "github:alekohs/kokovim/dotnet8";
+    kokovimv2.url = "github:alekohs/kokovim/feature/lazy.nvim";
   };
 
   outputs =
@@ -11,6 +12,7 @@
       kokovim,
       nixpkgs,
       utils,
+      kokovimv2,
     }:
     utils.lib.eachDefaultSystem (
       system:
@@ -36,6 +38,7 @@
           overlays = [
             (final: prev: {
               neovim = kokovim.packages.${prev.system}.default;
+              kokovim = kokovimv2.packages.${prev.system}.default;
             })
           ];
           config = {
@@ -58,6 +61,7 @@
           "7"
           "8"
           "9"
+          "10"
         ];
         defaultVersion = "9";
 
@@ -93,6 +97,7 @@
           mkShell {
             name = "Dotnet${defaultVersion}";
             packages = [ ];
+            runtimeInputs = [ kokovimv2 ];
             buildInputs = [
               dotnetCorePackages."sdk_${defaultVersion}_0"
               csharpier
