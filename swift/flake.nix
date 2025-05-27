@@ -28,6 +28,9 @@
                 ripgrep
                 jq
                 coreutils
+
+                xcodegen
+                tuist
               ];
 
               shellHook = ''
