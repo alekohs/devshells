@@ -2,8 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
     utils.url = "github:numtide/flake-utils";
-    kokovim.url = "github:alekohs/kokovim/dotnet8";
-    kokovimv2.url = "github:alekohs/kokovim/feature/lazy.nvim";
+    kokovim.url = "github:alekohs/kokovim";
   };
 
   outputs =
@@ -12,7 +11,6 @@
       kokovim,
       nixpkgs,
       utils,
-      kokovimv2,
     }:
     utils.lib.eachDefaultSystem (
       system:
@@ -35,12 +33,6 @@
 
         legacyPkgs = import nixpkgs {
           inherit system;
-          overlays = [
-            (final: prev: {
-              neovim = kokovim.packages.${prev.system}.default;
-              kokovim = kokovimv2.packages.${prev.system}.default;
-            })
-          ];
           config = {
             config = {
               allowUnfree = true; # For unfree packages like Google Chrome
