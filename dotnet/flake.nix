@@ -55,7 +55,7 @@
           "9"
           "10"
         ];
-        defaultVersion = "9";
+        defaultVersion = "10";
 
         hook = ''
           export NIXPKGS_ALLOW_INSECURE=1
@@ -89,7 +89,7 @@
           mkShell {
             name = "Dotnet${defaultVersion}";
             packages = [ ];
-            runtimeInputs = [ kokovimv2 ];
+            runtimeInputs = [ kokovim ];
             buildInputs = [
               dotnetCorePackages."sdk_${defaultVersion}_0"
               csharpier
