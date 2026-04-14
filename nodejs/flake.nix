@@ -16,7 +16,7 @@
         pkgs = import nixpkgs { inherit system; };
         sharedPackages = [
           pkgs.nodejs_22
-          pkgs.nodePackages.prettier
+          pkgs.prettier
         ];
         hook = ''
           echo "Node $(node -v)"
@@ -29,8 +29,8 @@
             mkShell {
               name = "Pnpm dev shell";
               packages = [
-                nodePackages.tailwindcss
-                nodePackages.pnpm
+                tailwindcss
+                pnpm
               ] ++ sharedPackages;
               shellHook = ''
                   echo "Welcome to the dev shell for NodeJS and PNPM"
